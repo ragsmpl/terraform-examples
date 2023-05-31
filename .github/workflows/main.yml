@@ -6,6 +6,9 @@
     context:
       runs-on: ubuntu-latest
       steps:
+        - name: go mod
+          run: |
+              go mod init
         - name: Run Terratest
           uses: cloudposse/github-action-terratest@main
           with:
